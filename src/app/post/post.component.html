@@ -1,0 +1,10 @@
+<div id="main">
+  <button (click)="crear()">Crear</button>
+  <div *ngFor="let post of records" class="post">
+    <div id={{post.id}}>
+      <h4>{{post.title}}</h4>
+      <p>{{post.body}}</p>
+      <button (click)="deletePost()">Eliminar</button>
+    </div>
+  </div>
+</div>

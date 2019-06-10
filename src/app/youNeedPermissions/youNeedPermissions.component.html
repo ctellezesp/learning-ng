@@ -1,0 +1,18 @@
+<ng-container>
+  <div fxLayout='row' class="zero">
+    <div *ngFor="let person of records" fxFlex="25%" class="card" >
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{person.name}}</mat-card-title>
+          <mat-card-subtitle>{{person.username}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Email: {{person.email}}</p>
+          <p>Phone: {{person.phone}}</p>
+          <p>Website: {{person.website}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</ng-container>

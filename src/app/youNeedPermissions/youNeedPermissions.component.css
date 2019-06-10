@@ -1,0 +1,12 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://img.icons8.com/color/420/person-male.png');
+  background-size: cover;
+}
+
+.zero{
+  width: 100%;
+}

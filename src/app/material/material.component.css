@@ -1,0 +1,75 @@
+.example-container {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  background:	#3268D5;
+}
+
+.example-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+img{
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.no-navbar{
+  padding-left: 250px 
+}
+
+.mat-button.mat-warn, .mat-icon-button.mat-warn, .mat-stroked-button.mat-warn{
+  color: white;
+  background: #03a9f4;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent{
+  background-color: #03a9f4;
+}
+
+.mat-drawer-container{
+  background-color: transparent;
+}
+
+.mat-icon-button{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.content{
+  padding: 20px;
+}
+
+.mat-form-field{
+  font-size: 18px !important;
+  height: 45px !important;
+}
+
+.mat-form-field-wrapper{
+  padding: 0 !important;
+}

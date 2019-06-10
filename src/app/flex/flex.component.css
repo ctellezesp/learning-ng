@@ -1,0 +1,37 @@
+.zero > div{
+	height: 300px;
+}
+
+.zero .one{
+	background-color: blue;
+}
+
+.zero .two{
+	background-color: green;
+}
+
+.zero .three{
+	background-color: yellow;
+}
+
+.zero .four{
+	background-color: red;
+}
+
+.zero .five{
+	background-color: brown;
+}
+
+.column-flex{
+	height: 100%;
+	width: 100%;
+}
+
+.column-flex > div{
+	border: 1px dashed black;
+}
+
+.row_column_two_one{
+	height: 100%;
+	width: 100%;
+}

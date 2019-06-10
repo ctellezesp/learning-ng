@@ -1,0 +1,49 @@
+<ng-container>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+                 [fixedInViewport]=true
+                >
+    <img src="https://avatars0.githubusercontent.com/u/26472750?s=460&v=4"/>
+    <h2 class="head-content">Carlos Tellez</h2>
+    <p class="head-content">Designer</p>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>home</mat-icon>
+        <h3 mat-line>Welcome</h3>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>wifi</mat-icon>
+        <h3 mat-line>Señales</h3>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>help</mat-icon>
+        <h3 mat-line>Casos de Soporte</h3>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>crop</mat-icon>
+        <h3 mat-line>Soluciones de Casos</h3>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>notes</mat-icon>
+        <h3 mat-line>Descripciones de casos</h3>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>outlined_flag</mat-icon>
+        <h3 mat-line>Tipos de casos</h3>
+      </mat-list-item>
+    </mat-list>
+    </mat-sidenav>
+    
+  </mat-sidenav-container>
+</ng-container>
+<div class="no-navbar">
+	<div class="content">
+		
+		<h2>Casos de Soporte</h2>
+		<app-table-selection></app-table-selection>
+
+	</div>
+  <button mat-mini-fab mat-icon-button color="warn">
+    <mat-icon aria-label="Agregar">add</mat-icon>
+  </button>
+</div>

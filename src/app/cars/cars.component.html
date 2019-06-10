@@ -1,0 +1,16 @@
+<button (click)="create()">Create</button>
+<div *ngFor="let car of records">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{car.brand}}</mat-card-title>
+      <mat-card-subtitle>{{car.color}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{car.img_url}} alt="Photo Card">
+    <mat-card-content>
+      <p>Wheels: {{car.wheels}}</p>
+      <p>Price: {{car.price}}</p>
+    </mat-card-content>
+  </mat-card>
+  <button (click)="delete(car.id)">Delete</button>
+</div>
