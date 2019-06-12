@@ -41,6 +41,7 @@ import { RolesModule } from './admin/roles/roles.module';
 import {PersonsService} from './persons.service';
 import {PostService} from './post.service';
 import {CarsService} from './cars.service';
+import {AuthService} from './auth.service';
 
 @NgModule({
   declarations: [
@@ -72,15 +73,15 @@ import {CarsService} from './cars.service';
     RolesModule,
     HttpClientModule,
     TranslateModule.forRoot({
-        loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-        }
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
     }),
     AppRoutingModule
   ],
-  providers: [PersonsService, PostService, CarsService],
+  providers: [PersonsService, PostService, CarsService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
