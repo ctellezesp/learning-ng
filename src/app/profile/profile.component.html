@@ -1,0 +1,12 @@
+<h4>Profile Data</h4>
+<p>{{'DATOS.nombre' | translate}}: {{datos.name}}</p>
+<p>{{'DATOS.apellido' | translate}}: {{datos.lastName}}</p>
+<p>{{'DATOS.correo' | translate}}: {{datos.email}}</p>
+<p>{{'DATOS.telefono' | translate}}: {{datos.phone}}</p>
+<p>{{'DATOS.escuela' | translate}}: {{datos.school}}</p>
+
+<div>
+    <button [ngClass]="{'active': activeLang == 'es'}" (click)="cambiarLenguaje('es')">Español</button>
+    <button [ngClass]="{'active': activeLang == 'en'}" (click)="cambiarLenguaje('en')">Inglés</button>
+    <button [ngClass]="{'active': activeLang == 'fr'}" (click)="cambiarLenguaje('fr')">Frances</button>
+</div>

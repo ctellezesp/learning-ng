@@ -9,6 +9,7 @@ import {FlexComponent} from './flex/flex.component';
 import {YouNeedPermissions} from './youNeedPermissions/youNeedPermissions.component';
 import { PostComponent } from './post/post.component';
 import {CarsComponent} from './cars/cars.component';
+import {ProfileComponent} from './profile/profile.component';
 
 import { AuthGuard } from './auth.guard';
 
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   { path: 'youNeedPermissions', component: YouNeedPermissions,  canActivate: [AuthGuard]},
   { path: 'post', component: PostComponent},
   { path: 'cars', component: CarsComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: '**',   redirectTo: '', pathMatch: 'full' }
 ];
 
