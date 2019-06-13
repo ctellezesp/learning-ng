@@ -2,15 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import {CarsService} from '../cars.service';
 import { ActivatedRoute } from '@angular/router';
 
+class Car{
+  id: number;
+  brand: string;
+  color: string;
+  wheels: number;
+  price: number;
+  img_url: string;
+}
+
 @Component({
   selector: 'app-cars',
   templateUrl: './cars.component.html',
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent implements OnInit {
-  records;
-  id;
-  car = {};
+  records: any;
+  id: any;
+  car: Car;
 
   constructor(private Post: CarsService,  private route: ActivatedRoute) { }
 
@@ -19,7 +28,7 @@ export class CarsComponent implements OnInit {
   }
 
   getCars(): void{
-    this.Post.getCars().subscribe(records => {
+    this.Post.getCars().subscribe((records:any) => {
       this.records = records.cars;
       console.log(this.records);
     });

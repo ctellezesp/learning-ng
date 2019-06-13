@@ -8,7 +8,7 @@ class Car{
   brand: string;
   color: string;
   wheels: number;
-  price: string;
+  price: number;
   img_url: string;
 }
 

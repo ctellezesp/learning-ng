@@ -3,6 +3,13 @@ import { PostService } from '../post.service';
 import { ActivatedRoute } from '@angular/router';
 
 
+class Post{
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -11,7 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PostComponent implements OnInit {
   records;
   id;
-  post = {}
+  post: Post;
 
   constructor(private Posty: PostService, private route: ActivatedRoute) { }
 
