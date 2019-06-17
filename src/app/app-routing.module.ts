@@ -10,6 +10,8 @@ import {YouNeedPermissions} from './youNeedPermissions/youNeedPermissions.compon
 import { PostComponent } from './post/post.component';
 import {CarsComponent} from './cars/cars.component';
 import {ProfileComponent} from './profile/profile.component';
+import { FormsComponent } from './forms/forms.component';
+import { SyntaxComponent } from './syntax/syntax.component';
 
 import { AuthGuard } from './auth.guard';
 
@@ -21,6 +23,8 @@ const appRoutes: Routes = [
   { path: 'post', component: PostComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'profile', component: ProfileComponent},
+  { path: 'forms', component: FormsComponent},
+  { path: 'syntax', component: SyntaxComponent},
   { path: '**',   redirectTo: '', pathMatch: 'full' }
 ];
 

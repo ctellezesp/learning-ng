@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 //Packages for Angular Material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
@@ -33,6 +36,8 @@ import {YouNeedPermissions} from './youNeedPermissions/youNeedPermissions.compon
 import { PostComponent } from './post/post.component';
 import {CarsComponent} from './cars/cars.component';
 import {ProfileComponent} from './profile/profile.component';
+import { FormsComponent } from './forms/forms.component';
+import { SyntaxComponent } from './syntax/syntax.component';
 
 import { AdminModule } from './admin/admin.module';
 import { UsersModule } from './admin/users/users.module';
@@ -54,7 +59,9 @@ import { AuthGuard } from './auth.guard';
     YouNeedPermissions,
     PostComponent,
     CarsComponent,
-    ProfileComponent
+    ProfileComponent,
+    FormsComponent,
+    SyntaxComponent
   ],
   imports: [
     BrowserModule,
@@ -80,6 +87,8 @@ import { AuthGuard } from './auth.guard';
           deps: [HttpClient]
       }
     }),
+    CommonModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [PersonsService, PostService, CarsService, AuthService, AuthGuard],

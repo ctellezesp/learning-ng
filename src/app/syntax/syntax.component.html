@@ -1,0 +1,16 @@
+<h4>Syntax</h4>
+Type your name: <input [(ngModel)]="name" />
+<ng-container *ngIf="name ; else loading">
+  <h3>Welcome {{name}}</h3>
+</ng-container>
+<ng-template #loading>
+  <h4>Please type your name!</h4>
+</ng-template>
+
+<p>Teams clasified to Champions League: </p>
+<ul *ngFor="let team of teams" [ngSwitch]="team">
+  <li *ngSwitchCase="'Manchester City'" class="text-sky">{{team}}</li>
+  <li *ngSwitchCase="'Liverpool'" class="text-red">{{team}}</li>
+  <li *ngSwitchCase="'Spurs'" class="text-gold">{{team}}</li>
+  <li *ngSwitchCase="'Chelsea'" class="text-blue">{{team}}</li>
+</ul>
