@@ -38,6 +38,7 @@ import {CarsComponent} from './cars/cars.component';
 import {ProfileComponent} from './profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
 import { SyntaxComponent } from './syntax/syntax.component';
+import { RxJSComponent } from './rxjs/rxjs.component';
 
 import { AdminModule } from './admin/admin.module';
 import { UsersModule } from './admin/users/users.module';
@@ -62,7 +63,8 @@ import { PostResolver } from './post-resolve.service';
     CarsComponent,
     ProfileComponent,
     FormsComponent,
-    SyntaxComponent
+    SyntaxComponent,
+    RxJSComponent
   ],
   imports: [
     BrowserModule,

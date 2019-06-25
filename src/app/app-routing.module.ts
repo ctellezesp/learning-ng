@@ -12,6 +12,7 @@ import {CarsComponent} from './cars/cars.component';
 import {ProfileComponent} from './profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
 import { SyntaxComponent } from './syntax/syntax.component';
+import { RxJSComponent } from './rxjs/rxjs.component';
 
 import { AuthGuard } from './auth.guard';
 import { PostResolver } from './post-resolve.service';
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'forms', component: FormsComponent},
   { path: 'syntax', component: SyntaxComponent},
+  { path: 'rxjs', component: RxJSComponent},
   { path: '**',   redirectTo: '', pathMatch: 'full' }
 ];
 
