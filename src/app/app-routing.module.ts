@@ -14,13 +14,14 @@ import { FormsComponent } from './forms/forms.component';
 import { SyntaxComponent } from './syntax/syntax.component';
 
 import { AuthGuard } from './auth.guard';
+import { PostResolver } from './post-resolve.service';
 
 const appRoutes: Routes = [
   { path: '', component: AdminWelcomeComponent },
   { path: 'material', component: MaterialComponent},
   { path: 'flex', component: FlexComponent},
   { path: 'youNeedPermissions', component: YouNeedPermissions,  canActivate: [AuthGuard]},
-  { path: 'post', component: PostComponent},
+  { path: 'post', component: PostComponent, resolve: {records: PostResolver}},
   { path: 'cars', component: CarsComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'forms', component: FormsComponent},

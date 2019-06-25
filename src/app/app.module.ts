@@ -48,6 +48,7 @@ import {PostService} from './post.service';
 import {CarsService} from './cars.service';
 import {AuthService} from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { PostResolver } from './post-resolve.service';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,7 @@ import { AuthGuard } from './auth.guard';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PersonsService, PostService, CarsService, AuthService, AuthGuard],
+  providers: [PersonsService, PostService, CarsService, AuthService, AuthGuard, PostResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
