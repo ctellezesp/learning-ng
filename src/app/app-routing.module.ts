@@ -13,6 +13,7 @@ import {ProfileComponent} from './profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
 import { SyntaxComponent } from './syntax/syntax.component';
 import { RxJSComponent } from './rxjs/rxjs.component';
+import { DynamicFormComponent } from './dynamicForm/dynamicForm.component';
 
 import { AuthGuard } from './auth.guard';
 import { PostResolver } from './post-resolve.service';
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'forms', component: FormsComponent},
   { path: 'syntax', component: SyntaxComponent},
   { path: 'rxjs', component: RxJSComponent},
+  { path: 'dynamicForm', component: DynamicFormComponent},
   { path: '**',   redirectTo: '', pathMatch: 'full' }
 ];
 

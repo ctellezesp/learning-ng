@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of, interval } from 'rxjs';
+import { Observable, of, interval, Subject } from 'rxjs';
 import { map, first, catchError } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
 
@@ -43,12 +43,14 @@ observable2 = interval(300);
       })
     );
     
-    /*this.subscription = this.observable1.subscribe(x => console.log('first: ' + x));
-    this.childSubscription = this.observable2.subscribe(x => console.log('second: ' + x));
-    this.subscription.add(this.childSubscription);
-    this.setTimeout();*/
-
+    const observable = interval(1000);
+    const subscription = observable.subscribe(x => console.log(x));
+    // Later:
+    // This cancels the ongoing Observable execution which
+    // was started by calling subscribe with an Observer.
+    subscription.unsubscribe();
   }
+
 
 
 }

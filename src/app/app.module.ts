@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule }          from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -10,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 //Packages for Angular Material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 import { RouterModule, Routes } from '@angular/router'; //Router
 
@@ -39,6 +43,7 @@ import {ProfileComponent} from './profile/profile.component';
 import { FormsComponent } from './forms/forms.component';
 import { SyntaxComponent } from './syntax/syntax.component';
 import { RxJSComponent } from './rxjs/rxjs.component';
+import { DynamicFormComponent } from './dynamicForm/dynamicForm.component';
 
 import { AdminModule } from './admin/admin.module';
 import { UsersModule } from './admin/users/users.module';
@@ -64,7 +69,8 @@ import { PostResolver } from './post-resolve.service';
     ProfileComponent,
     FormsComponent,
     SyntaxComponent,
-    RxJSComponent
+    RxJSComponent,
+    DynamicFormComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +88,9 @@ import { PostResolver } from './post-resolve.service';
     AdminModule,
     UsersModule,
     RolesModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatFormFieldModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

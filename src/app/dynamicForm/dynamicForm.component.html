@@ -1,0 +1,14 @@
+<mat-form-field>
+  <mat-label>Selecciona tu medio de contacto</mat-label>
+  <mat-select [(value)]="contactSelected">
+    <mat-option *ngFor="let contact of contacts" [value]=contact>
+      {{contact}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>You selected: {{contactSelected}}</p>
+
+<div class="app">
+  <dynamic-form [config]="config"></dynamic-form>
+</div>
