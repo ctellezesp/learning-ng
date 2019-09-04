@@ -1,0 +1,32 @@
+<h1>Pregunta NO: {{numero}}</h1>
+<mat-form-field>
+  <mat-label>Selecciona tu medio de contacto</mat-label>
+  <mat-select [(value)]="contactSelected">
+    <mat-option *ngFor="let contact of contacts" [value]=contact>
+      {{contact}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>You selected: {{contactSelected}}</p>
+
+<div [ngSwitch]="contactSelected">
+
+    <div *ngSwitchCase="'Correo'">
+      <p>Esto se mostrará para el correo</p>
+    </div>
+
+    <div *ngSwitchCase="'Telefono'">
+      <p>Esto se mostrará para el Telefono</p>
+    </div>
+
+    <div *ngSwitchCase="'Facebook'">
+      <p>Esto se mostrará para el Facebook</p>
+    </div>
+
+    <div *ngSwitchCase="'Blackberry PIN'">
+      <p>Esto se mostrará para el Blackberry PIN</p>
+    </div>
+
+  </div> 
+<button mat-raised-button (click)="enviar()">Eliminar</button>

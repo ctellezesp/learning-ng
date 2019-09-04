@@ -55,6 +55,9 @@ import {CarsService} from './cars.service';
 import {AuthService} from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { PostResolver } from './post-resolve.service';
+import { DynamicFieldComponent } from './dynamic-field/dynamic-field.component';
+import { UserService } from './user.service';
+import { UserQueryService } from './user-query.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,8 @@ import { PostResolver } from './post-resolve.service';
     FormsComponent,
     SyntaxComponent,
     RxJSComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    DynamicFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,6 @@ import { PostResolver } from './post-resolve.service';
     MatCardModule,
     FlexLayoutModule,
     AdminModule,
-    UsersModule,
     RolesModule,
     ReactiveFormsModule,
     MatSelectModule,
@@ -103,7 +106,7 @@ import { PostResolver } from './post-resolve.service';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PersonsService, PostService, CarsService, AuthService, AuthGuard, PostResolver],
+  providers: [PersonsService, PostService, CarsService, AuthService, AuthGuard, PostResolver, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

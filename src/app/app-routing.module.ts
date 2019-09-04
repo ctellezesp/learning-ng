@@ -30,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'syntax', component: SyntaxComponent},
   { path: 'rxjs', component: RxJSComponent},
   { path: 'dynamicForm', component: DynamicFormComponent},
+  { path: 'lazy', loadChildren: () => import('./admin/users/users.module').then(mod => mod.UsersModule)},
   { path: '**',   redirectTo: '', pathMatch: 'full' }
 ];
 
